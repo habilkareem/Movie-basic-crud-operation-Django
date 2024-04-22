@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+    <tr>
+        <th>Name</th>
+        <th>View</th>
+        <th>Update</th>
+    </tr>
+    {%for Genre in res%}
+    <tr>
+        <td>{{Genre.name}}</td>
+        <td><a href="{%url 'specific' Genre.id%}">Views</a></td>
+        <td><a href="{%url 'update' Genre.id%}">Update</a></td>
+    </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>
